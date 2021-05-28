@@ -6,7 +6,7 @@ The purpose of this analysis is to use machine learning models to determine whic
 
 ## Results
 
-Below are the results of 6 structured machine learning models. For each, I will assess the accuracy score, precision and recall scores.
+Below are the results of 6 structured machine learning models. For each, I will assess the accuracy score, precision and recall scores. The combination of each of these scores will identify the best model.
 
 Accuracy score is the number of correct predictions divided by the total number of predictions.
 
@@ -20,36 +20,45 @@ Recall is the portion of samples from a class which are correctly predicted by t
 
     Recall = TP/(TP + FN)
 
-### Oversampling (RandomOverSampler)
+### Oversampling
+
+- Oversampling models add records to the minority group to balance the dataset to (hopefully) remove bias in the training set.
+
+#### RandomOverSampler
 
 ![NaiveRandomOversampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/NaiveRandomOversampling.png)
 
-- The NaiveRandomOversampling model adds records to the minority group to balance the dataset to (hopefully) remove bias in the training set. This RandomOverSampler was xxx% accurate, xxx% precise, and xxx% sensitive.
+- This RandomOverSampler was 63.9% accurate, for low risk loans it was 100% precise and 69% sensitive, and for high risk loans it was 1% precise and 59% sensitive.
 
-### SMOTE
+#### SMOTE
 
 ![SMOTEOversampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/SMOTEOversampling.png)
-This XXXX was xxx% accurate, xxx% precise, and xxx% sensitive.
 
-### Undersampling (ClusterCentroids)
+- This SMOTE was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
+
+### Undersampling
+
+#### ClusterCentroids
 
 ![Undersampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/Undersampling.png)
-This XXXX was xxx% accurate, xxx% precise, and xxx% sensitive.
+This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
 
-### SMOTEENN
+### Combination
+
+#### SMOTEENN
 
 ![SMOTEENN](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/SMOTEENN.png)
-This XXXX was xxx% accurate, xxx% precise, and xxx% sensitive.
+This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
 
 ### BalancedRandomForestClassifier
 
 ![BalancedRandomForestClassifier](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/BalancedRandomForestClassifier.png)
-This XXXX was xxx% accurate, xxx% precise, and xxx% sensitive.
+This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
 
 ### EasyEnsembleClassifier
 
 ![EasyEnsembleAdaBoostClassifier](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/EasyEnsembleAdaBoostClassifier.png)
-This XXXX was xxx% accurate, xxx% precise, and xxx% sensitive.
+This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
 
 ## Summary
 
