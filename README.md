@@ -2,28 +2,37 @@
 
 ## Purpose
 
-Explain the purpose of this analysis.
+The purpose of this analysis is to use machine learning models to determine which model can best predict credit risk. Using credit card  data from LendingClub, we'll evaluate the performance of 6 models: oversampling, undersampling, SMOTE, SMOTEENN, Random Forest Classifier and Easy Ensemble Classifier.
 
 ## Results
 
+Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
+
 ### Oversampling (RandomOverSampler)
-![NaiveRandomOversampling](https://github.com/krockway/MechaCar_Statistical_Analysis/blob/main/images/NaiveRandomOversampling.png)
+
+![NaiveRandomOversampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/NaiveRandomOversampling.png)
+
+- What metric or metrics are you going to test?
 
 ### Undersampling (ClusterCentroids)
 
+![Undersampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/Undersampling.png)
+
 ### SMOTE
+
+![SMOTEOversampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/SMOTEOversampling.png)
 
 ### SMOTEENN
 
+![SMOTEENN](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/SMOTEENN.png)
+
 ### BalancedRandomForestClassifier
+
+![BalancedRandomForestClassifier](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/BalancedRandomForestClassifier.png)
 
 ### EasyEnsembleClassifier
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
-- What metric or metrics are you going to test?
-
-
-![Linear Regression Results](https://github.com/krockway/MechaCar_Statistical_Analysis/blob/main/images/Deliverable1.1.png)
+![EasyEnsembleAdaBoostClassifier](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/EasyEnsembleAdaBoostClassifier.png)
 
 ## Summary
 
