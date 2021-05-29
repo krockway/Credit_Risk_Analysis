@@ -16,7 +16,7 @@ Precision determines how accurate the positive predictions are.
 
     Precision = TP/(TP + FP)
 
-Recall is the portion of samples from a class which are correctly predicted by the model.
+Recall (or sensitivity) is the portion of samples from a class which are correctly predicted by the model.
 
     Recall = TP/(TP + FN)
 
@@ -28,40 +28,44 @@ Recall is the portion of samples from a class which are correctly predicted by t
 
 ![NaiveRandomOversampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/NaiveRandomOversampling.png)
 
-- This RandomOverSampler was 63.9% accurate, for low risk loans it was 100% precise and 69% sensitive, and for high risk loans it was 1% precise and 59% sensitive.
+- The RandomOverSampler method was 63.9% accurate, for low risk loans it was 100% precise and 69% sensitive, and for high risk loans it was 1% precise and 59% sensitive.
 
 #### SMOTE
 
 ![SMOTEOversampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/SMOTEOversampling.png)
 
-- This SMOTE was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
+- The SMOTE method was 62.2% accurate, for low risk loans it was 100% precise and 66% sensitive, and for high risk loans it was 1% precise and 59% sensitive.
 
 ### Undersampling
 
 #### ClusterCentroids
 
 ![Undersampling](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/Undersampling.png)
-This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
+This ClusterCentroids method was 51% accurate, for low risk loans it was 100% precise and 43% sensitive, and for high risk loans it was 1% precise and 59% sensitive.
 
 ### Combination
 
 #### SMOTEENN
 
 ![SMOTEENN](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/SMOTEENN.png)
-This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
+This SMOTEENN method was 64.1% accurate, for low risk loans it was 100% precise and 55% sensitive, and for high risk loans it was 1% precise and 74% sensitive.
 
-### BalancedRandomForestClassifier
+### Ensemble Classifiers
+
+#### BalancedRandomForestClassifier
 
 ![BalancedRandomForestClassifier](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/BalancedRandomForestClassifier.png)
-This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
+This BalancedRandomForestClassifier method was 78.7% accurate, for low risk loans it was 100% precise and 91% sensitive, and for high risk loans it was 4% precise and 67% sensitive.
 
-### EasyEnsembleClassifier
+#### EasyEnsembleClassifier
 
 ![EasyEnsembleAdaBoostClassifier](https://github.com/krockway/Credit_Risk_Analysis/blob/main/Images/EasyEnsembleAdaBoostClassifier.png)
-This XXXX was xxx% accurate, for low risk loans it was xxx% precise and xxx% sensitive, and for high risk loans it was xxx% precise and xxx% sensitive.
+This EasyEnsembleAdaBoostClassifier method was 92.5% accurate, for low risk loans it was 100% precise and 94% sensitive, and for high risk loans it was 7% precise and 91% sensitive.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+Overall, each model was very precise at identifying low risk loans; but were quite imprecise at identifying high risk loans, which defeats the purpose of our research, we want to identify high risk loans. 
 
-From the support column, I can see that the high_risk figures are significantly outnumbered (87 vs 17,118).
+Because of the imbalance of the dataset, accuracy is not a valuable measure in any of the models.  
+
+The EasyEnsembleClassifier method was best at identifying high risk loans (91% recall) and should be used moving forward; but a close eye should be kept on future data points, as overfitting may be an issue.
